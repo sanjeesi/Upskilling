@@ -1,0 +1,49 @@
+body{
+    background-image: url(/static/backG1.jpg);
+    background-size: cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;              /* optional, center the image */
+    color: rgb(245, 253, 208);
+    font-family: 'Sofia';font-size: 22px;
+
+}
+
+header h1{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: chartreuse;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    font-family: cursive;
+    font-size: medium;
+    text-decoration: none;
+    background: #8a4343;
+    color: #fff;
+    /* justify-self: end;
+    display: inline-block;
+    border: 2; */
+    /* text-align: center; */
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.course {
+    padding: 20px;
+    border: 1px solid #00dba0;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+
+.course iframe {
+    margin-top: auto;
+}
