@@ -47,3 +47,11 @@ a.button {
 .course iframe {
     margin-top: auto;
 }
+
+.navbar-brand {
+    color: chartreuse;
+}
+
+body.nav {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
