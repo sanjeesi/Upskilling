@@ -76,9 +76,9 @@
         /* Modal Content/Box */
         .modal-content {
             background-color: #fefefe;
-            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            margin: 1% auto 25% auto; /* 5% from the top, 15% from the bottom and centered */
             border: 1px solid #888;
-            width: 80%; /* Could be more or less, depending on screen size */
+            width: 60%; /* Could be more or less, depending on screen size */
         }
         
         /* The Close Button (x) */
@@ -127,16 +127,18 @@
 </head>
 <body>
     
-    <h2>Modal Login Form</h2>
+    <h2>C4Coding -Login</h2>
     
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    <button onclick="location.href = 'register';" style="width:auto;">Register</button>
     
     <div id="id01" class="modal">
         
-        <form class="modal-content animate" action="/action_page.php" method="post">
+        <form class="modal-content animate" action="/" method="post">
+            {% csrf_token %}
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="static/img_avatar2.png" alt="Avatar" class="avatar" width="10px" height="150px">
+                <img src="static/img_avatar2.png" alt="Avatar" class="avatar" width="10" height="250">
             </div>
             
             <div class="container">
@@ -170,6 +172,12 @@
             }
         }
     </script>
+
+    <div>
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+    </div>
 
     <!-- <form action="login" method="POST">
         {% csrf_token %}
